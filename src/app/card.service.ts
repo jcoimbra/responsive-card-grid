@@ -1,13 +1,18 @@
 import { Injectable } from '@angular/core';
 import { Card } from './card';
-import { CARDS } from './mock-cards';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class CardService {
 
-  constructor() { }
+  private cardsUrl = 'api/cards';
 
-  getCards(): Card[] {
-    return CARDS;
+  constructor(
+    private http: HttpClient
+  ) { }
+
+  getCards(): Observable<Card[]> {
+    return this.http.get<Card[]>(this.cardsUrl);
   }
 }
