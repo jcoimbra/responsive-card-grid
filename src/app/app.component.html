@@ -1,43 +1,7 @@
 <div class="card-container">
-  <mat-card class="card">
+  <mat-card class="card" *ngFor="let card of cards">
     <mat-card-title>
-      Card Title
-    </mat-card-title>
-    <img mat-card-image src="http://via.placeholder.com/250x250">
-  </mat-card>
-  <mat-card class="card">
-    <mat-card-title>
-      Card Title
-    </mat-card-title>
-    <img mat-card-image src="http://via.placeholder.com/250x250">
-  </mat-card>
-  <mat-card class="card">
-    <mat-card-title>
-      Card Title
-    </mat-card-title>
-    <img mat-card-image src="http://via.placeholder.com/250x250">
-  </mat-card>
-  <mat-card class="card">
-    <mat-card-title>
-      Card Title
-    </mat-card-title>
-    <img mat-card-image src="http://via.placeholder.com/250x250">
-  </mat-card>
-  <mat-card class="card">
-    <mat-card-title>
-      Card Title
-    </mat-card-title>
-    <img mat-card-image src="http://via.placeholder.com/250x250">
-  </mat-card>
-  <mat-card class="card">
-    <mat-card-title>
-      Card Title
-    </mat-card-title>
-    <img mat-card-image src="http://via.placeholder.com/250x250">
-  </mat-card>
-  <mat-card class="card">
-    <mat-card-title>
-      Card Title
+      {{card.name}}
     </mat-card-title>
     <img mat-card-image src="http://via.placeholder.com/250x250">
   </mat-card>
